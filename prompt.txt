@@ -1,0 +1,124 @@
+# **Project Prompt: Social Media Post Organizer (React.js, Front-End Only, PWA Ready)**
+
+## **Project Goal**
+
+Build a React.js front-end-only web application that allows users to save, organize, and manage social media post links (LinkedIn, Instagram, Facebook) into customizable categories. All data is stored in the browser using `localStorage`.
+
+The app should be **modern, polished, responsive**, and **progressive web app (PWA) ready** so users can install it on mobile devices, work offline, and get a native-app-like experience.
+
+---
+
+## **Core Functional Features**
+
+1. **Automatic Clipboard Detection**
+
+   * Detect clipboard content on app load (LinkedIn, Instagram, Facebook post links) using Clipboard API.
+   * Open modal to select category and edit post title before saving.
+   * Ctrl/Cmd + V triggers modal with pasted link pre-filled.
+
+2. **Manual Post Entry**
+
+   * “Create Post” button opens modal for manual input of URL, post title, and category.
+
+3. **Post Management**
+
+   * Save, edit, delete posts.
+   * Edit post title, URL, or category.
+   * Open post in a new tab.
+
+4. **Category Management**
+
+   * Add, edit, delete categories.
+   * Filter posts by category.
+
+5. **Persistent Storage**
+
+   * Store posts, categories, timestamps, tags, favorites, and UI state in `localStorage`.
+   * Maintain state across reloads and offline access (PWA feature).
+
+6. **Search & Filtering**
+
+   * Real-time search filtering by title, URL, category, or tags.
+   * Optional: fuzzy search for partial matches.
+
+7. **Import/Export**
+
+   * Export JSON file of all app data including UI state.
+   * Import JSON to restore data and re-render UI.
+
+8. **Browser Close Warning**
+
+   * Prompt user to export data if there are unsaved posts before closing browser.
+
+9. **Advanced Features**
+
+   * Detect multiple social platforms automatically.
+   * Auto-generate post previews (thumbnails, description snippet).
+   * Tags and Favorites system for advanced organization.
+   * Dark mode toggle.
+   * PWA-ready: installable on mobile, offline access, caching of assets & data.
+
+---
+
+## **UI/UX Requirements**
+
+* **Navbar**
+
+  * App logo/title
+  * Import/export buttons
+  * Search bar
+  * Theme toggle (light/dark)
+
+* **Main Layout**
+
+  * **Left Sidebar:** List of categories + favorites, collapsible on mobile.
+  * **Main Content:** Grid/list view of posts:
+
+    * Title, URL, category, timestamp, tags
+    * Actions: Edit, Delete, Open, Favorite
+  * Smooth hover and transition animations
+
+* **Modals**
+
+  * Rounded corners, soft shadows, smooth fade-in/slide animations
+  * Inputs: URL, title, category, tags
+  * Buttons: Save (primary), Cancel (secondary)
+
+* **Empty State**
+
+  * Illustration or icon prompting to save/import first post
+
+* **Styling & Theming**
+
+  * Modern color palette, soft shadows, hover/focus effects
+  * CSS Modules for scoped styles
+  * Smooth transitions for hover, modals, and list updates
+  * Responsive mobile-first design
+  * Dark mode support
+  * PWA offline-friendly styling
+
+---
+
+## **Technical Implementation Requirements**
+
+* **Framework:** React.js (functional components + hooks)
+* **State Management:** `useState`, `useEffect`, `useReducer` if needed
+* **Storage:** `localStorage` + service workers for offline PWA caching
+* **Clipboard Handling:** Clipboard API
+* **File Handling:** FileReader for import, Blob/URL.createObjectURL for export
+* **Components:**
+
+  * Navbar, Sidebar, PostCard, Modal, SearchBar
+* **Animations:** CSS transitions and keyframes
+* **Responsive:** Mobile-first, collapsible sidebar, stacked cards
+* **PWA Features:** Installable, offline caching, background sync (optional)
+
+---
+
+### ✅ **Additional Notes**
+
+* The PWA support ensures the app works offline, loads faster on repeat visits, and can be installed on mobile devices.
+* Mobile users should have intuitive gestures and layouts (e.g., collapsible sidebar, stacked posts, swipe-friendly cards).
+* All animations and transitions should remain smooth even on mobile.
+
+---
